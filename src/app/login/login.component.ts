@@ -7,7 +7,7 @@ import { AfDatabaseService } from '../_services/af-database.service';
 @Component({
 	selector: 'app-login',
 	templateUrl: './login.component.html',
-	styleUrls: ['./login.component.scss']
+	styleUrls: ['./login.component.less']
 })
 export class LoginComponent{
 
@@ -16,14 +16,10 @@ export class LoginComponent{
 		private afDatabaseService: AfDatabaseService,
 		@Inject(MAT_DIALOG_DATA) public data: any) 
 	{ 
+		this.dialogRef.disableClose = true;
 		this.afDatabaseService.getAuthState$.subscribe(user => {
 			if (user) this.dialogRef.close();
-		})
-
-	}
-
-	onNoClick(): void {
-		this.dialogRef.close();
+		});
 	}
 
 	login() {

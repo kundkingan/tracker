@@ -20,7 +20,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.scss"
+        "styles.less"
       ],
       "scripts": [
         "../node_modules/plotly.js/dist/plotly.min.js"
@@ -58,7 +58,7 @@
     }
   },
   "defaults": {
-    "styleExt": "scss",
+    "styleExt": "less",
     "class": {
       "spec": false
     },

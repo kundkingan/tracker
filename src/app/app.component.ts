@@ -10,7 +10,7 @@ import { AfDatabaseService } from './_services/af-database.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.less']
 })
 export class AppComponent {
 
@@ -29,12 +29,8 @@ export class AppComponent {
       this.signedIn = true;
     } else {
       this.signedIn = false;
-      let dialogRef = this.dialog.open(LoginComponent);
+      this.dialog.open(LoginComponent);
     }
-  }
-
-  logout() {
-    this.afAuth.auth.signOut();
   }
 
 }
