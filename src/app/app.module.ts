@@ -32,7 +32,7 @@ import { AfAuthService } from './_services/af-auth.service';
     FormsModule,
     AppRoutingModule,
     MaterialModule,
-    ServiceWorkerModule.register('/ngsw-worker.js'),
+    ServiceWorkerModule.register('./ngsw-worker.js'),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule
